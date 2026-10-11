@@ -28,7 +28,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p style={{ color: "var(--color-slate-600)", fontSize: "0.95rem" }}>
-            Last Updated: October 2026 • MSME / Udyam Registered Venture • Domain: <strong>https://alistron.in</strong>
+            Last Updated: October 2026 • MSME / Udyam Registered Venture
           </p>
         </div>
       </section>

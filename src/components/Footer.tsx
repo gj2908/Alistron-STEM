@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-slate-400)" }}>
                 <MapPin size={16} color="var(--stem-bright)" />
-                <span>India • alistron.in</span>
+                <span>India</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
-import { Mail, Phone, MapPin, ShieldCheck, Clock } from "lucide-react";
+import { Mail, Phone, ShieldCheck, Clock } from "lucide-react";
 
 export const metadata = {
   title: "Contact & Enquiries | ALISTRON NeuroTech & STEM",
@@ -57,13 +57,10 @@ export default function ContactPage() {
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "0.875rem" }}>
                     <Mail size={22} color="var(--neuro-primary)" style={{ marginTop: "2px", flexShrink: 0 }} />
                     <div>
-                      <h4 style={{ fontSize: "1rem", marginBottom: "0.25rem" }}>Email Channels</h4>
+                      <h4 style={{ fontSize: "1rem", marginBottom: "0.25rem" }}>Email</h4>
                       <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                         <a href="mailto:contact@alistron.in" style={{ color: "var(--neuro-primary)", fontWeight: 600, textDecoration: "none" }}>
                           contact@alistron.in
-                        </a>
-                        <a href="mailto:alistronllp@gmail.com" style={{ color: "var(--color-slate-700)", fontWeight: 500, textDecoration: "none", fontSize: "0.95rem" }}>
-                          alistronllp@gmail.com
                         </a>
                       </div>
                     </div>
@@ -83,18 +80,6 @@ export default function ContactPage() {
                           +91 84346 91751
                         </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card" style={{ padding: "1.25rem 1.5rem" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.875rem" }}>
-                    <MapPin size={22} color="var(--stem-primary)" />
-                    <div>
-                      <h4 style={{ fontSize: "1rem", marginBottom: "0.15rem" }}>Official Web Domain</h4>
-                      <span style={{ color: "var(--color-slate-700)", fontWeight: 600 }}>
-                        https://alistron.in
-                      </span>
                     </div>
                   </div>
                 </div>
