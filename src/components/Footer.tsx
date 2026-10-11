@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 import { Cpu, GraduationCap, Mail, Phone, ShieldCheck, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
@@ -25,41 +26,8 @@ export default function Footer() {
         >
           {/* Brand Column */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-            <Link
-              href="/"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.625rem",
-                textDecoration: "none",
-              }}
-            >
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "var(--radius-md)",
-                  backgroundColor: "var(--color-white)",
-                  color: "var(--color-navy-900)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: "1.1rem",
-                }}
-              >
-                A
-              </div>
-              <span
-                style={{
-                  fontSize: "1.25rem",
-                  fontWeight: 800,
-                  color: "var(--color-white)",
-                  letterSpacing: "-0.025em",
-                }}
-              >
-                ALISTRON
-              </span>
+            <Link href="/" aria-label="Alistron home" style={{ textDecoration: "none", width: "fit-content" }}>
+              <Logo tone="dark" tagline />
             </Link>
             <p style={{ color: "var(--color-slate-400)", lineHeight: 1.6, fontSize: "0.9rem" }}>
               Engineering a smarter future through pioneering NeuroTech exploration and practical, high-impact STEM education infrastructure.
@@ -71,15 +39,16 @@ export default function Footer() {
                   contact@alistron.in
                 </a>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-slate-300)" }}>
-                <Phone size={16} color="var(--stem-bright)" />
-                <a href="tel:+919319836470" style={{ color: "var(--color-slate-300)", textDecoration: "none" }}>
-                  +91 93198 36470
-                </a>
-                <span style={{ color: "var(--color-slate-600)" }}>•</span>
-                <a href="tel:+918434691751" style={{ color: "var(--color-slate-300)", textDecoration: "none" }}>
-                  +91 84346 91751
-                </a>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", color: "var(--color-slate-300)" }}>
+                <Phone size={16} color="var(--stem-bright)" style={{ marginTop: "0.25rem", flexShrink: 0 }} />
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <a href="tel:+919319836470" style={{ color: "var(--color-slate-300)", textDecoration: "none", whiteSpace: "nowrap" }}>
+                    +91 93198 36470
+                  </a>
+                  <a href="tel:+918434691751" style={{ color: "var(--color-slate-300)", textDecoration: "none", whiteSpace: "nowrap" }}>
+                    +91 84346 91751
+                  </a>
+                </div>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-slate-400)" }}>
                 <MapPin size={16} color="var(--stem-bright)" />
@@ -140,11 +109,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/events" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  Events & School Outreach
-                </Link>
-              </li>
-              <li>
                 <Link href="/stem#lab-setup" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
                   School STEM Lab Planning
                 </Link>
@@ -170,32 +134,32 @@ export default function Footer() {
           {/* Company & Legal */}
           <div>
             <h4 style={{ color: "var(--color-white)", fontSize: "1.05rem", fontWeight: 700, marginBottom: "1rem" }}>
-              Parent Brand & Legal
+              Company
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.625rem" }}>
               <li>
                 <Link href="/about" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  About Alistron
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link href="/events" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  Events & Workshops
+                  Events
                 </Link>
               </li>
               <li>
                 <Link href="/projects" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  IoT Projects Portfolio
+                  Projects
                 </Link>
               </li>
               <li>
                 <Link href="/contact" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  Unified Contact Desk
+                  Contact
                 </Link>
               </li>
               <li>
                 <Link href="/privacy" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-                  Privacy Policy & Data Notice
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -238,14 +202,14 @@ export default function Footer() {
           }}
         >
           <div>
-            © 2026 ALISTRON. MSME / Udyam Registered Venture • Domain: <strong>alistron.in</strong>
+            © {new Date().getFullYear()} Alistron. MSME / Udyam registered venture.
           </div>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link href="/privacy" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
               Privacy Policy
             </Link>
             <Link href="/contact" style={{ color: "var(--color-slate-400)", textDecoration: "none" }}>
-              Support Desk
+              Contact
             </Link>
           </div>
         </div>

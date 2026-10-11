@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div className="container">
           <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
             <span className="badge badge-parent" style={{ marginBottom: "1rem" }}>
-              Unified Enquiry Desk
+              Contact
             </span>
             <h1 style={{ fontSize: "clamp(2.25rem, 4vw + 1rem, 3.5rem)", marginBottom: "1.25rem" }}>
               Get in Touch with Alistron
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <div style={{ display: "flex", alignItems: "center", gap: "0.875rem" }}>
                     <Clock size={22} color="var(--color-navy-900)" />
                     <div>
-                      <h4 style={{ fontSize: "1rem", marginBottom: "0.15rem" }}>Desk Operating Hours</h4>
+                      <h4 style={{ fontSize: "1rem", marginBottom: "0.15rem" }}>Office Hours</h4>
                       <span style={{ color: "var(--color-slate-600)", fontSize: "0.875rem" }}>
                         Monday – Saturday • 09:00 to 18:00 IST
                       </span>

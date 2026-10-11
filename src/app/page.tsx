@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Cpu, GraduationCap, ArrowRight, CheckCircle, ShieldCheck, Activity, Layers } from "lucide-react";
 import ProjectGrid from "@/components/ProjectGrid";
 import JourneyTimeline from "@/components/JourneyTimeline";
@@ -15,62 +16,41 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        style={{
-          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
-          paddingTop: "5.5rem",
-          paddingBottom: "5rem",
-          borderBottom: "1px solid var(--color-slate-200)",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <div style={{ maxWidth: "840px", margin: "0 auto", textAlign: "center" }}>
-            <div className="badge badge-parent" style={{ marginBottom: "1.25rem" }}>
-              MSME / Udyam Registered Venture
-            </div>
+      <section className="hero">
+        <div className="container hero-inner">
+          <div className="hero-copy">
+            <span className="hero-eyebrow">Engineering Human Potential</span>
 
-            <h1
-              style={{
-                fontSize: "clamp(2.5rem, 5vw + 1rem, 4rem)",
-                fontWeight: 800,
-                color: "var(--color-navy-900)",
-                lineHeight: 1.15,
-                letterSpacing: "-0.03em",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Engineering a Smarter Future.
-            </h1>
+            <h1 className="hero-title">Engineering a Smarter Future.</h1>
 
-            <p
-              style={{
-                fontSize: "clamp(1.1rem, 1.5vw + 0.8rem, 1.35rem)",
-                color: "var(--color-slate-700)",
-                lineHeight: 1.6,
-                marginBottom: "2.5rem",
-                fontWeight: 400,
-              }}
-            >
+            <p className="hero-lede">
               Bringing together emerging assistive technology and practical STEM education to turn engineering ideas into meaningful real-world possibilities.
             </p>
 
-            <div
-              style={{
-                display: "flex",
-                gap: "1rem",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <a href="#divisions" className="btn btn-primary-navy btn-lg">
+            <div className="hero-actions">
+              <a href="#divisions" className="btn btn-brand btn-lg">
                 Explore Our Divisions <ArrowRight size={18} />
               </a>
-              <Link href="/contact" className="btn btn-outline btn-lg">
+              <Link href="/contact" className="btn btn-ghost-light btn-lg">
                 Start a Conversation
               </Link>
             </div>
+
+            <ul className="hero-meta">
+              <li>MSME / Udyam registered</li>
+              <li>NeuroTech research</li>
+              <li>STEM labs for schools</li>
+            </ul>
+          </div>
+
+          <div className="hero-visual">
+            <Image
+              src="/images/brand/emblem.webp"
+              alt="Alistron emblem: the Alistron A with a robotic prosthetic hand and orbit ring"
+              width={580}
+              height={410}
+              preload
+            />
           </div>
         </div>
       </section>
@@ -316,7 +296,7 @@ export default function Home() {
 
           <div style={{ textAlign: "center" }}>
             <Link href="/events" className="btn btn-primary-navy btn-lg">
-              View All 5 Activities & Outreach Programs <ArrowRight size={16} />
+              View All Events & Outreach <ArrowRight size={16} />
             </Link>
           </div>
         </div>

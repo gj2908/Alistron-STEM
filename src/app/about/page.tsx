@@ -130,7 +130,7 @@ export default function AboutPage() {
             We welcome conversations with schools, academic researchers, and engineering collaborators.
           </p>
           <Link href="/contact" className="btn btn-primary-navy btn-lg" style={{ backgroundColor: "var(--color-white)", color: "var(--color-navy-900)" }}>
-            Contact Unified Desk <ArrowRight size={18} />
+            Contact Us <ArrowRight size={18} />
           </Link>
         </div>
       </section>

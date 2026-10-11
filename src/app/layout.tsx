@@ -1,7 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Michroma } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+/* Wide geometric display face used for the ALISTRON wordmark. */
+const michroma = Michroma({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-michroma",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#030B1C",
+};
 
 export const metadata: Metadata = {
   title: "ALISTRON | Advancing NeuroTech Research & STEM Education",
@@ -10,7 +23,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Alistron Engineering Team", url: "https://alistron.in" }],
   metadataBase: new URL("https://alistron.in"),
   openGraph: {
-    title: "ALISTRON | Engineering a Smarter Future",
+    title: "ALISTRON | Engineering Human Potential",
     description: "Bringing together emerging neuro-technology research and practical STEM education lab infrastructure.",
     url: "https://alistron.in",
     siteName: "Alistron",
@@ -30,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={michroma.variable}>
       <body>
         <Navbar />
         <main id="main-content" style={{ flexGrow: 1 }}>
