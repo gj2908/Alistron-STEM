@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   GraduationCap,
   Cpu,
-  Info,
   Users,
   ArrowRight,
 } from "lucide-react";
@@ -40,6 +39,7 @@ export async function generateMetadata({ params }: EventDetailPageProps) {
   return {
     title: `${event.name} | Events & Outreach | ALISTRON`,
     description: event.shortDescription,
+    alternates: { canonical: `/events/${event.slug}/` },
   };
 }
 
@@ -211,23 +211,25 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                   marginBottom: "1.75rem",
                 }}
               >
-                <div style={{ display: "flex", gap: "0.75rem" }}>
-                  <Calendar size={20} color="var(--color-navy-900)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
-                  <div>
-                    <strong style={{ fontSize: "0.85rem", color: "var(--color-slate-900)", display: "block" }}>
-                      Session Schedule
-                    </strong>
-                    <span style={{ fontSize: "0.9rem", color: "var(--color-slate-600)" }}>
-                      {event.date}
-                    </span>
+                {event.date && (
+                  <div style={{ display: "flex", gap: "0.75rem" }}>
+                    <Calendar size={20} color="var(--color-navy-900)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
+                    <div>
+                      <strong style={{ fontSize: "0.85rem", color: "var(--color-slate-900)", display: "block" }}>
+                        Session Schedule
+                      </strong>
+                      <span style={{ fontSize: "0.9rem", color: "var(--color-slate-600)" }}>
+                        {event.date}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div style={{ display: "flex", gap: "0.75rem" }}>
                   <MapPin size={20} color="var(--stem-primary)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
                   <div>
                     <strong style={{ fontSize: "0.85rem", color: "var(--color-slate-900)", display: "block" }}>
-                      Hosting Venue / Institution
+                      Venue
                     </strong>
                     <span style={{ fontSize: "0.9rem", color: "var(--color-slate-600)" }}>
                       {event.venue}
@@ -324,29 +326,6 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               </div>
             </div>
 
-            {/* Verification and Responsible Record Notice */}
-            <div
-              style={{
-                padding: "1.25rem 1.5rem",
-                borderRadius: "var(--radius-lg)",
-                backgroundColor: "#FFFBEB",
-                border: "1px solid #FDE68A",
-                display: "flex",
-                gap: "0.85rem",
-                alignItems: "flex-start",
-              }}
-            >
-              <Info size={20} color="#D97706" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
-              <div>
-                <strong style={{ fontSize: "0.875rem", color: "#92400E", display: "block", marginBottom: "0.25rem" }}>
-                  Record Verification Notice
-                </strong>
-                <p style={{ fontSize: "0.85rem", color: "#92400E", lineHeight: 1.5, margin: 0 }}>
-                  {event.verificationNotice}
-                </p>
-              </div>
-            </div>
-
             {/* Contact / Inquire CTA */}
             <div
               style={{
@@ -371,7 +350,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               </div>
 
               <Link href="/contact?type=school" className="btn btn-stem">
-                Contact Outreach Desk <ArrowRight size={16} />
+                Talk to Our STEM Team <ArrowRight size={16} />
               </Link>
             </div>
           </div>

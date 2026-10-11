@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { GraduationCap, ArrowRight, Info } from "lucide-react";
+import { GraduationCap, ArrowRight } from "lucide-react";
 import EventGrid from "@/components/EventGrid";
 
 export const metadata = {
@@ -61,33 +61,10 @@ export default function EventsPage() {
                 fontSize: "1.15rem",
                 color: "var(--color-slate-700)",
                 lineHeight: 1.6,
-                marginBottom: "1.75rem",
               }}
             >
-              Discover Alistron&apos;s hands-on Arduino workshops, iterative robotics learning editions, and practical STEM training initiatives delivered to school and collegiate learners.
+              Discover Alistron&apos;s hands-on Arduino workshops, iterative robotics learning editions, and practical STEM training initiatives, all hosted at SRM Institute of Science and Technology (SRMIST).
             </p>
-
-            {/* Factual Disclaimer Banner */}
-            <div
-              style={{
-                backgroundColor: "rgba(241, 245, 249, 0.85)",
-                border: "1px solid var(--color-slate-300)",
-                borderRadius: "var(--radius-md)",
-                padding: "0.875rem 1.25rem",
-                textAlign: "left",
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "0.75rem",
-                fontSize: "0.85rem",
-                color: "var(--color-slate-600)",
-                lineHeight: 1.5,
-              }}
-            >
-              <Info size={18} color="var(--color-navy-900)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
-              <div>
-                <strong>Archival & Record Notice:</strong> All activities are documented based on factual session records. Specific venue names, session dates, and syllabus modules (including Kendriya Vidyalaya school branch details) are recorded conservatively and subject to ongoing archival verification. Alistron does not claim official institutional endorsement.
-              </div>
-            </div>
           </div>
         </div>
       </section>

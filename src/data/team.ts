@@ -8,12 +8,18 @@ export interface TeamMember {
   iconType: "vision" | "strategy" | "product" | "embedded" | "hardware";
 }
 
+/* Leadership hierarchy: each tier renders as its own row, top to bottom. */
+export const TEAM_TIERS: { label: string; role: string }[] = [
+  { label: "Co-Founders", role: "Co-Founder" },
+  { label: "Technical Team", role: "Technical Member" },
+];
+
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "aryan-jaiswal",
     name: "Aryan Jaiswal",
-    role: "Founder",
-    roleBadge: "Founder",
+    role: "Co-Founder",
+    roleBadge: "Co-Founder",
     description: "Vision, Research and Product Development",
     image: "/images/team/aryan-jaiswal.webp",
     iconType: "vision"

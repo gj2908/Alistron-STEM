@@ -9,7 +9,6 @@ import {
   ChevronDown,
   ChevronUp,
   ArrowRight,
-  ShieldAlert,
   GraduationCap,
   Cpu,
   CheckCircle2,
@@ -189,7 +188,7 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
         {event.shortDescription}
       </p>
 
-      {/* Date & Venue Section (Transparently noted when unverified) */}
+      {/* Date & Venue */}
       <div
         style={{
           display: "flex",
@@ -202,13 +201,15 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
           marginBottom: "1.25rem",
         }}
       >
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.825rem", color: "var(--color-slate-700)" }}>
-          <Calendar size={14} color="var(--color-navy-900)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
-          <span>
-            <strong style={{ color: "var(--color-slate-900)" }}>Date: </strong>
-            {event.date}
-          </span>
-        </div>
+        {event.date && (
+          <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.825rem", color: "var(--color-slate-700)" }}>
+            <Calendar size={14} color="var(--color-navy-900)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
+            <span>
+              <strong style={{ color: "var(--color-slate-900)" }}>Date: </strong>
+              {event.date}
+            </span>
+          </div>
+        )}
         <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.825rem", color: "var(--color-slate-700)" }}>
           <MapPin size={14} color="var(--stem-primary)" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
           <span>
@@ -294,23 +295,6 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
             </strong>
             <p style={{ fontSize: "0.85rem", color: "var(--color-slate-600)" }}>
               {event.targetAudience}
-            </p>
-          </div>
-
-          <div
-            style={{
-              padding: "0.6rem 0.75rem",
-              borderRadius: "var(--radius-sm)",
-              backgroundColor: "#FFFBEB",
-              border: "1px solid #FDE68A",
-              display: "flex",
-              gap: "0.4rem",
-              alignItems: "flex-start",
-            }}
-          >
-            <ShieldAlert size={14} color="#D97706" style={{ flexShrink: 0, marginTop: "0.15rem" }} />
-            <p style={{ fontSize: "0.725rem", color: "#92400E", margin: 0, lineHeight: 1.4 }}>
-              <strong>Notice:</strong> {event.verificationNotice}
             </p>
           </div>
         </div>

@@ -631,6 +631,47 @@ p:last-child {
   .hero-actions .btn { width: 100%; }
 }
 
+/* ---------- Team hierarchy ---------- */
+.team-tier + .team-tier {
+  margin-top: 3rem;
+}
+
+.team-tier-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-slate-500);
+}
+
+.team-tier-label::before,
+.team-tier-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-slate-200);
+}
+
+.team-tier-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.team-card {
+  flex: 0 1 250px;
+}
+
+@media (max-width: 560px) {
+  .team-card { flex-basis: 100%; max-width: 340px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

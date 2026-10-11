@@ -72,7 +72,7 @@ export default function NeuroTechPage() {
             }}
           >
             {/* Pillar 1 */}
-            <div className="card card-neuro">
+            <div id="bci-research" className="card card-neuro">
               <Brain size={32} color="var(--neuro-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 Brain-Computer Interfaces (BCI)
@@ -105,7 +105,7 @@ export default function NeuroTechPage() {
             </div>
 
             {/* Pillar 4 */}
-            <div className="card card-neuro">
+            <div id="neuroprosthetics" className="card card-neuro">
               <Zap size={32} color="var(--neuro-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 Neuroprosthetics & Haptic Feedback
@@ -127,7 +127,7 @@ export default function NeuroTechPage() {
             </div>
 
             {/* Pillar 6 */}
-            <div className="card card-neuro">
+            <div id="responsible-dev" className="card card-neuro">
               <ShieldCheck size={32} color="var(--neuro-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 Ethical Neuro-Technology

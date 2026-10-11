@@ -84,7 +84,7 @@ export default function STEMPage() {
             }}
           >
             {/* Service 1 */}
-            <div className="card card-stem">
+            <div id="lab-setup" className="card card-stem">
               <Wrench size={32} color="var(--stem-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 STEM Lab Planning & Procurement
@@ -95,7 +95,7 @@ export default function STEMPage() {
             </div>
 
             {/* Service 2 */}
-            <div className="card card-stem">
+            <div id="arduino-robotics" className="card card-stem">
               <Cpu size={32} color="var(--stem-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 Arduino & Microcontroller Training
@@ -117,7 +117,7 @@ export default function STEMPage() {
             </div>
 
             {/* Service 4 */}
-            <div className="card card-stem">
+            <div id="teacher-training" className="card card-stem">
               <Users size={32} color="var(--stem-primary)" style={{ marginBottom: "1rem" }} />
               <h3 style={{ fontSize: "1.35rem", marginBottom: "0.75rem", color: "var(--color-navy-900)" }}>
                 Teacher Mentorship Workshops

@@ -23,7 +23,6 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
 
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [responseDetails, setResponseDetails] = useState<{ simulated?: boolean; message?: string } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,14 +57,13 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
         }),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
 
-      if (!res.ok) {
-        throw new Error(data.error || "Failed to transmit enquiry. Please check form inputs.");
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "We couldn't send your enquiry right now. Please email us at contact@alistron.in and we'll get back to you.");
       }
 
       setStatus("success");
-      setResponseDetails(data);
       setFormData({
         name: "",
         email: "",
@@ -76,7 +74,11 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
       });
     } catch (err: unknown) {
       setStatus("error");
-      setErrorMessage((err instanceof Error ? err.message : String(err)) || "An unexpected network error occurred.");
+      setErrorMessage(
+        err instanceof TypeError
+          ? "Network error. Please check your connection, or email us at contact@alistron.in."
+          : (err instanceof Error && err.message) || "Something went wrong. Please email us at contact@alistron.in."
+      );
     }
   };
 
@@ -198,16 +200,11 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
           <CheckCircle2 size={22} color="#16A34A" style={{ flexShrink: 0, marginTop: "0.1rem" }} />
           <div>
             <h4 style={{ color: "#15803D", fontSize: "1.05rem", marginBottom: "0.25rem" }}>
-              Enquiry Transmitted Successfully!
+              Thank you, your enquiry has been sent.
             </h4>
             <p style={{ color: "#166534", fontSize: "0.875rem", margin: 0 }}>
               Thank you for reaching out to Alistron. Our team has received your enquiry and will respond to your provided email address shortly.
             </p>
-            {responseDetails?.simulated && (
-              <p style={{ color: "#15803D", fontSize: "0.775rem", marginTop: "0.5rem", fontStyle: "italic" }}>
-                Notice: Server operating in verified mock logging mode (Resend optional variables ready).
-              </p>
-            )}
           </div>
         </div>
       )}
@@ -227,7 +224,7 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
           }}
         >
           <AlertCircle size={20} color="#DC2626" style={{ flexShrink: 0 }} />
-          <p style={{ color: "#991B1B", fontSize: "0.875rem", margin: 0 }}>{errorMessage}</p>
+          <p role="alert" style={{ color: "#991B1B", fontSize: "0.875rem", margin: 0 }}>{errorMessage}</p>
         </div>
       )}
 

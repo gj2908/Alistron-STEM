@@ -14,11 +14,8 @@ Status: `DONE` fixed · `TODO` open · `BLOCKED` waiting on assets/specs
   `cache-control: public, max-age=0, must-revalidate` for everything. Added
   `public/_headers` (immutable for `/_next/static/*`, 30-day cache for
   `/images/*` and `*.svg`) — applies on Cloudflare Pages.
-- [ ] **TODO [P3]** Remove unused heavy photos still shipped in `public/images`
-  (e.g. `company-hq.jpg` 828 KB, `obstacle-avoider.jpg` 796 KB,
-  `bluetooth-car.jpg` 800 KB, `team-group.png` 672 KB). Not referenced by any
-  page but add ~3 MB to the deploy. Left in place in case they are planned for
-  future pages — confirm before deleting.
+- [x] **DONE [P3]** Unused photos (~5 MB) moved from `public/images` to
+  `assets/unused-photos/`: kept in the repo, no longer deployed.
 - [x] **DONE** Removed the leftover Next.js starter SVGs (`next.svg`,
   `vercel.svg`, `file.svg`, `globe.svg`, `window.svg`) from `public/`.
 
@@ -38,6 +35,27 @@ Status: `DONE` fixed · `TODO` open · `BLOCKED` waiting on assets/specs
   Needs specifics to fix: viewport width(s) + screenshots. Candidate areas to
   re-check: Navbar breakpoint (switches at 840px), project/event card grids,
   hero headings (`clamp()`), and detail-page hero images on mobile.
+
+## Content
+
+- [x] **DONE** All events list SRMIST as the venue; "to be confirmed" dates,
+  verification notices and photo badges removed. Dates show only when known.
+- [x] **DONE** Six footer section links pointed at missing anchors; ids added on
+  the Bionics and STEM pages.
+
+## Contact form
+
+- [x] **DONE [P1]** Form used to report success when `RESEND_API_KEY` was missing or
+  delivery failed (enquiry only logged). It now returns an error asking visitors to
+  email contact@alistron.in.
+- [ ] **TODO [P1] — Set `RESEND_API_KEY` and `RESEND_FROM_EMAIL`** in Cloudflare
+  Pages (see README). Sender domain must be verified in Resend.
+
+## SEO / security
+
+- [x] **DONE** Sitemap covers events and all project/event detail pages; branded 404.
+- [x] **DONE** Security headers (`nosniff`, `X-Frame-Options`, `Referrer-Policy`,
+  `Permissions-Policy`, HSTS) in `public/_headers`.
 
 ## Code quality
 
