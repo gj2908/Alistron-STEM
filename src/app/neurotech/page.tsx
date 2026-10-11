@@ -13,7 +13,7 @@ export default function NeuroTechPage() {
       {/* Division Hero Header */}
       <section
         style={{
-          background: "linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%)",
+          background: "var(--color-slate-50)",
           paddingTop: "5rem",
           paddingBottom: "4.5rem",
           borderBottom: "1px solid var(--neuro-border)",
@@ -208,7 +208,7 @@ export default function NeuroTechPage() {
       <section className="section section-dark">
         <div className="container" style={{ textAlign: "center", maxWidth: "760px" }}>
           <h2 style={{ color: "var(--color-white)", fontSize: "2.25rem", marginBottom: "1rem" }}>
-            Interested in Bionics Collaboration?
+            Interested in collaborating on bionics?
           </h2>
           <p style={{ color: "var(--color-slate-300)", fontSize: "1.05rem", marginBottom: "2rem" }}>
             We collaborate with academic researchers, biomechatronics engineers, and open-source hardware contributors.

@@ -9,17 +9,17 @@ export default function TeamSection() {
   const getIcon = (type: string) => {
     switch (type) {
       case "vision":
-        return <Lightbulb size={20} color="#2563EB" />;
+        return <Lightbulb size={20} color="var(--brand-blue)" />;
       case "strategy":
-        return <Users size={20} color="#2563EB" />;
+        return <Users size={20} color="var(--brand-blue)" />;
       case "product":
-        return <TrendingUp size={20} color="#2563EB" />;
+        return <TrendingUp size={20} color="var(--brand-blue)" />;
       case "embedded":
-        return <Cpu size={20} color="#2563EB" />;
+        return <Cpu size={20} color="var(--brand-blue)" />;
       case "hardware":
-        return <Wrench size={20} color="#2563EB" />;
+        return <Wrench size={20} color="var(--brand-blue)" />;
       default:
-        return <Cpu size={20} color="#2563EB" />;
+        return <Cpu size={20} color="var(--brand-blue)" />;
     }
   };
 
@@ -27,7 +27,7 @@ export default function TeamSection() {
     <section
       className="section"
       style={{
-        background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
+        background: "var(--color-slate-50)",
         borderTop: "1px solid var(--color-slate-200)",
         paddingTop: "5rem",
         paddingBottom: "5.5rem",
@@ -36,27 +36,14 @@ export default function TeamSection() {
       <div className="container">
         {/* Header */}
         <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 3.5rem" }}>
-          <span
-            style={{
-              display: "inline-block",
-              padding: "0.35rem 1rem",
-              borderRadius: "var(--radius-full)",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              backgroundColor: "#E0ECFD",
-              color: "#1D4ED8",
-              marginBottom: "1rem",
-            }}
-          >
-            OUR TEAM
+          <span className="badge" style={{ marginBottom: "0.875rem" }}>
+            Our team
           </span>
-          <h2 style={{ fontSize: "clamp(2.25rem, 3.5vw + 1rem, 3rem)", fontWeight: 800, color: "var(--color-navy-900)", marginBottom: "1rem" }}>
-            Meet the <span style={{ color: "#2563EB" }}>Team</span>
+          <h2 style={{ marginBottom: "1rem" }}>
+            The people behind Alistron
           </h2>
           <p style={{ fontSize: "1.05rem", color: "var(--color-slate-600)", lineHeight: 1.6 }}>
-            A dedicated team of engineers, researchers, and innovators working towards practical technology solutions in STEM education and emerging Bionics research.
+            Engineers and researchers building practical technology for STEM education and assistive bionics.
           </p>
         </div>
 
@@ -74,7 +61,7 @@ export default function TeamSection() {
                     flexDirection: "column",
                     padding: "0",
                     overflow: "hidden",
-                    border: "1px solid #E2E8F0",
+                    border: "1px solid var(--color-slate-200)",
                     borderRadius: "var(--radius-lg)",
                     backgroundColor: "var(--color-white)",
                     boxShadow: "var(--shadow-sm)",
@@ -87,7 +74,7 @@ export default function TeamSection() {
                       position: "relative",
                       width: "100%",
                       aspectRatio: "1 / 1.05",
-                      backgroundColor: "#E2E8F0",
+                      backgroundColor: "var(--color-slate-200)",
                       overflow: "hidden",
                     }}
                   >
@@ -130,9 +117,9 @@ export default function TeamSection() {
                         borderRadius: "var(--radius-full)",
                         fontSize: "0.75rem",
                         fontWeight: 600,
-                        backgroundColor: "#EFF6FF",
-                        color: "#2563EB",
-                        border: "1px solid #BFDBFE",
+                        backgroundColor: "var(--color-slate-100)",
+                        color: "var(--brand-blue)",
+                        border: "1px solid var(--color-slate-200)",
                         marginBottom: "1rem",
                       }}
                     >
@@ -144,7 +131,7 @@ export default function TeamSection() {
                       style={{
                         width: "36px",
                         height: "2px",
-                        backgroundColor: "#E2E8F0",
+                        backgroundColor: "var(--color-slate-200)",
                         marginBottom: "1rem",
                       }}
                     />
@@ -160,8 +147,8 @@ export default function TeamSection() {
                         width: "100%",
                         padding: "0.6rem 0.75rem",
                         borderRadius: "var(--radius-md)",
-                        backgroundColor: "#F8FAFC",
-                        border: "1px solid #F1F5F9",
+                        backgroundColor: "var(--color-slate-50)",
+                        border: "1px solid var(--color-slate-100)",
                       }}
                     >
                       <div
@@ -171,7 +158,7 @@ export default function TeamSection() {
                           width: "32px",
                           height: "32px",
                           borderRadius: "var(--radius-md)",
-                          backgroundColor: "#EFF6FF",
+                          backgroundColor: "var(--color-slate-100)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",

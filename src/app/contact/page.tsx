@@ -12,7 +12,7 @@ export default function ContactPage() {
     <>
       <section
         style={{
-          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
+          background: "var(--color-slate-50)",
           paddingTop: "5rem",
           paddingBottom: "4rem",
           borderBottom: "1px solid var(--color-slate-200)",

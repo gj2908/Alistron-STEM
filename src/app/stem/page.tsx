@@ -14,7 +14,7 @@ export default function STEMPage() {
       {/* Hero Header */}
       <section
         style={{
-          background: "linear-gradient(180deg, #F0FDFA 0%, #FFFFFF 100%)",
+          background: "var(--color-slate-50)",
           paddingTop: "5rem",
           paddingBottom: "4.5rem",
           borderBottom: "1px solid var(--stem-border)",
@@ -35,7 +35,7 @@ export default function STEMPage() {
             {/* School Approval Principle Callout */}
             <div
               style={{
-                backgroundColor: "#F0FDFA",
+                backgroundColor: "var(--color-slate-50)",
                 border: "1px solid var(--stem-border)",
                 borderRadius: "var(--radius-md)",
                 padding: "1rem 1.25rem",

@@ -11,7 +11,7 @@ import {
   ArrowRight,
   GraduationCap,
   Cpu,
-  CheckCircle2,
+  Check,
 } from "lucide-react";
 import { AlistronEvent } from "@/data/events";
 
@@ -27,27 +27,27 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
     switch (cat) {
       case "School Outreach":
         return {
-          bg: "rgba(13, 148, 136, 0.08)",
-          text: "#0D9488",
-          border: "rgba(13, 148, 136, 0.25)",
+          bg: "var(--color-slate-100)",
+          text: "var(--color-slate-700)",
+          border: "var(--color-slate-200)",
         };
       case "Workshops":
         return {
-          bg: "rgba(79, 70, 229, 0.08)",
-          text: "#4F46E5",
-          border: "rgba(79, 70, 229, 0.25)",
+          bg: "var(--color-slate-100)",
+          text: "var(--color-slate-700)",
+          border: "var(--color-slate-200)",
         };
       case "Robotics":
         return {
-          bg: "rgba(2, 132, 199, 0.08)",
-          text: "#0284C7",
-          border: "rgba(2, 132, 199, 0.25)",
+          bg: "var(--color-slate-100)",
+          text: "var(--color-slate-700)",
+          border: "var(--color-slate-200)",
         };
       case "Arduino":
         return {
-          bg: "rgba(217, 119, 6, 0.08)",
-          text: "#D97706",
-          border: "rgba(217, 119, 6, 0.25)",
+          bg: "var(--color-slate-100)",
+          text: "var(--color-slate-500)",
+          border: "var(--color-slate-200)",
         };
       default:
         return {
@@ -153,7 +153,7 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
       <h3
         style={{
           fontSize: "1.35rem",
-          fontWeight: 800,
+          fontWeight: 650,
           color: "var(--color-navy-900)",
           marginBottom: "0.4rem",
           lineHeight: 1.25,
@@ -196,7 +196,7 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
           gap: "0.45rem",
           padding: "0.75rem 0.9rem",
           borderRadius: "var(--radius-md)",
-          backgroundColor: "#F8FAFC",
+          backgroundColor: "var(--color-slate-50)",
           border: "1px solid var(--color-slate-200)",
           marginBottom: "1.25rem",
         }}
@@ -255,7 +255,7 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
                 lineHeight: 1.4,
               }}
             >
-              <CheckCircle2
+              <Check
                 size={14}
                 color="var(--stem-primary)"
                 style={{ flexShrink: 0, marginTop: "0.15rem" }}

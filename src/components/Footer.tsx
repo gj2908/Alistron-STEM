@@ -169,7 +169,7 @@ export default function Footer() {
         {/* Responsible Disclaimer Box */}
         <div
           style={{
-            backgroundColor: "rgba(30, 41, 59, 0.6)",
+            backgroundColor: "rgba(255, 255, 255, 0.03)",
             border: "1px solid var(--color-navy-800)",
             borderRadius: "var(--radius-md)",
             padding: "1rem 1.25rem",

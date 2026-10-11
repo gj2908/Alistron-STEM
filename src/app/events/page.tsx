@@ -15,7 +15,7 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section
         style={{
-          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
+          background: "var(--color-slate-50)",
           paddingTop: "5rem",
           paddingBottom: "4rem",
           borderBottom: "1px solid var(--color-slate-200)",
@@ -46,7 +46,7 @@ export default function EventsPage() {
             <h1
               style={{
                 fontSize: "clamp(2.25rem, 4vw + 1rem, 3.5rem)",
-                fontWeight: 800,
+                fontWeight: 650,
                 color: "var(--color-navy-900)",
                 lineHeight: 1.15,
                 letterSpacing: "-0.03em",
@@ -109,7 +109,7 @@ export default function EventsPage() {
             <h3
               style={{
                 fontSize: "1.75rem",
-                fontWeight: 800,
+                fontWeight: 650,
                 color: "var(--color-navy-900)",
                 marginBottom: "0.75rem",
               }}

@@ -7,7 +7,7 @@ import {
   ArrowLeft,
   Calendar,
   MapPin,
-  CheckCircle2,
+  Check,
   GraduationCap,
   Cpu,
   Users,
@@ -58,7 +58,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
       {/* Top Breadcrumb & Hero */}
       <section
         style={{
-          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
+          background: "var(--color-slate-50)",
           paddingTop: "4.5rem",
           paddingBottom: "3.5rem",
           borderBottom: "1px solid var(--color-slate-200)",
@@ -94,9 +94,9 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                   fontWeight: 700,
                   textTransform: "uppercase",
                   letterSpacing: "0.05em",
-                  backgroundColor: "rgba(13, 148, 136, 0.08)",
-                  color: "#0D9488",
-                  border: "1px solid rgba(13, 148, 136, 0.25)",
+                  backgroundColor: "var(--color-slate-100)",
+                  color: "var(--color-slate-700)",
+                  border: "1px solid var(--color-slate-200)",
                 }}
               >
                 {event.category === "School Outreach" ? <GraduationCap size={14} /> : <Cpu size={14} />}
@@ -121,7 +121,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             <h1
               style={{
                 fontSize: "clamp(2.25rem, 4vw + 1rem, 3.25rem)",
-                fontWeight: 800,
+                fontWeight: 650,
                 color: "var(--color-navy-900)",
                 lineHeight: 1.15,
                 letterSpacing: "-0.025em",
@@ -180,7 +180,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               <h2
                 style={{
                   fontSize: "1.4rem",
-                  fontWeight: 800,
+                  fontWeight: 650,
                   color: "var(--color-navy-900)",
                   marginBottom: "1rem",
                 }}
@@ -205,7 +205,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                   gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
                   gap: "1.25rem",
                   padding: "1.25rem",
-                  backgroundColor: "#F8FAFC",
+                  backgroundColor: "var(--color-slate-50)",
                   borderRadius: "var(--radius-lg)",
                   border: "1px solid var(--color-slate-200)",
                   marginBottom: "1.75rem",
@@ -288,7 +288,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               <h2
                 style={{
                   fontSize: "1.4rem",
-                  fontWeight: 800,
+                  fontWeight: 650,
                   color: "var(--color-navy-900)",
                   marginBottom: "1rem",
                 }}
@@ -313,7 +313,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                       border: "1px solid var(--color-slate-200)",
                     }}
                   >
-                    <CheckCircle2
+                    <Check
                       size={18}
                       color="var(--stem-primary)"
                       style={{ flexShrink: 0, marginTop: "0.15rem" }}
@@ -342,7 +342,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             >
               <div>
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--color-white)", marginBottom: "0.25rem" }}>
-                  Interested in this Workshop format?
+                  Interested in this workshop format?
                 </h3>
                 <p style={{ fontSize: "0.9rem", color: "var(--color-slate-300)", margin: 0 }}>
                   Contact our STEM team to plan an event or inquire about syllabus customization.

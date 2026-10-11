@@ -1,10 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Michroma } from "next/font/google";
+import { Geist, Michroma } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-/* Wide geometric display face used for the ALISTRON wordmark. */
+/* Text face for the whole site. */
+const geist = Geist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist",
+});
+
+/* Wide geometric display face used only for the ALISTRON wordmark. */
 const michroma = Michroma({
   weight: "400",
   subsets: ["latin"],
@@ -13,7 +20,7 @@ const michroma = Michroma({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#030B1C",
+  themeColor: "#070C15",
 };
 
 export const metadata: Metadata = {
@@ -43,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={michroma.variable}>
+    <html lang="en" className={`${geist.variable} ${michroma.variable}`}>
       <body>
         <Navbar />
         <main id="main-content" style={{ flexGrow: 1 }}>

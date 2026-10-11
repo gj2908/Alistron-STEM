@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, CheckCircle2, AlertCircle, Loader2, GraduationCap, Cpu, HelpCircle } from "lucide-react";
+import { Send, Check, AlertCircle, Loader2, GraduationCap, Cpu, HelpCircle } from "lucide-react";
 
 export default function ContactForm({ initialType }: { initialType?: "school" | "neurotech" | "general" }) {
   const searchParams = useSearchParams();
@@ -197,7 +197,7 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
             alignItems: "flex-start",
           }}
         >
-          <CheckCircle2 size={22} color="#16A34A" style={{ flexShrink: 0, marginTop: "0.1rem" }} />
+          <Check size={22} color="#16A34A" style={{ flexShrink: 0, marginTop: "0.1rem" }} />
           <div>
             <h4 style={{ color: "#15803D", fontSize: "1.05rem", marginBottom: "0.25rem" }}>
               Thank you, your enquiry has been sent.

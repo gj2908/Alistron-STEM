@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { JOURNEY_MILESTONES } from "@/data/journey";
-import { CheckCircle2, Maximize2, Sparkles, Briefcase, Users, Microchip, GraduationCap, X } from "lucide-react";
+import { Check, Maximize2, Briefcase, Users, Microchip, GraduationCap, X } from "lucide-react";
 
 export default function JourneyTimeline() {
   const [activeTab, setActiveTab] = useState<string>("all");
@@ -22,18 +22,18 @@ export default function JourneyTimeline() {
       : JOURNEY_MILESTONES.filter((m) => m.id === activeTab);
 
   return (
-    <section className="section" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)" }}>
+    <section className="section">
       <div className="container">
         {/* Section Header */}
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 3.5rem" }}>
-          <span className="badge badge-parent" style={{ marginBottom: "1rem", display: "inline-flex", gap: "0.5rem" }}>
-            <Sparkles size={14} /> Our Evolution & Journey
+          <span className="badge" style={{ marginBottom: "0.875rem" }}>
+            Our journey
           </span>
-          <h2 style={{ fontSize: "clamp(2rem, 3vw + 1rem, 2.75rem)", marginBottom: "1rem" }}>
-            From a Student Club to an MSME-Registered Venture
+          <h2 style={{ marginBottom: "1rem" }}>
+            From a student club to an MSME-registered venture
           </h2>
           <p style={{ fontSize: "1.1rem", color: "var(--color-slate-600)", lineHeight: 1.6 }}>
-            What began as a group of passionate engineering students soldering hardware in a lab has grown into <strong>ALISTRON</strong>—an MSME-registered venture focused on practical STEM education and emerging Bionics research.
+            What began as a group of passionate engineering students soldering hardware in a lab has grown into Alistron, an MSME-registered venture focused on practical STEM education and emerging Bionics research.
           </p>
 
           {/* Interactive Phase Selector */}
@@ -235,7 +235,7 @@ export default function JourneyTimeline() {
                     <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                       {m.highlights.map((h, hIdx) => (
                         <div key={hIdx} style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem", fontSize: "0.875rem", color: "var(--color-slate-700)" }}>
-                          <CheckCircle2 size={16} color={isEven ? "var(--neuro-primary)" : "var(--stem-primary)"} style={{ marginTop: "2px", flexShrink: 0 }} />
+                          <Check size={16} color={isEven ? "var(--neuro-primary)" : "var(--stem-primary)"} style={{ marginTop: "2px", flexShrink: 0 }} />
                           <span>{h}</span>
                         </div>
                       ))}
