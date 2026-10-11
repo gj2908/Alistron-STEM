@@ -155,7 +155,7 @@ export default function ProjectGrid({ defaultFilter }: { defaultFilter?: FilterC
                     ) : (
                       <GraduationCap size={12} />
                     )}
-                    {isNeuro ? "NeuroTech" : isIoT ? "Wireless & IoT" : "STEM"}
+                    {isNeuro ? "Bionics" : isIoT ? "Wireless & IoT" : "STEM"}
                   </span>
 
                   <span

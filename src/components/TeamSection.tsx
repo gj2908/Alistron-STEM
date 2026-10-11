@@ -56,7 +56,7 @@ export default function TeamSection() {
             Meet the <span style={{ color: "#2563EB" }}>Team</span>
           </h2>
           <p style={{ fontSize: "1.05rem", color: "var(--color-slate-600)", lineHeight: 1.6 }}>
-            A dedicated team of engineers, researchers, and innovators working towards practical technology solutions in STEM education and emerging NeuroTech research.
+            A dedicated team of engineers, researchers, and innovators working towards practical technology solutions in STEM education and emerging Bionics research.
           </p>
         </div>
 

@@ -30,7 +30,7 @@ export default function Footer() {
               <Logo tone="dark" tagline />
             </Link>
             <p style={{ color: "var(--color-slate-400)", lineHeight: 1.6, fontSize: "0.9rem" }}>
-              Engineering a smarter future through pioneering NeuroTech exploration and practical, high-impact STEM education infrastructure.
+              Engineering a smarter future through pioneering Bionics exploration and practical, high-impact STEM education infrastructure.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "0.25rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-slate-300)" }}>
@@ -57,12 +57,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Division A: NeuroTech */}
+          {/* Division A: Bionics */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
               <Cpu size={18} color="var(--neuro-bright)" />
               <h4 style={{ color: "var(--color-white)", fontSize: "1.05rem", fontWeight: 700 }}>
-                Alistron NeuroTech
+                Alistron Bionics
               </h4>
             </div>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.625rem" }}>
@@ -183,7 +183,7 @@ export default function Footer() {
         >
           <ShieldCheck size={20} color="var(--neuro-bright)" style={{ flexShrink: 0 }} />
           <span>
-            <strong>Responsible Innovation Notice:</strong> Alistron NeuroTech projects are exploratory hardware & software research prototypes and do not claim clinical efficacy or regulatory medical approval. Alistron STEM laboratory setups occur strictly following formal school assessment and administration approval.
+            <strong>Responsible Innovation Notice:</strong> Alistron Bionics projects are exploratory hardware & software research prototypes and do not claim clinical efficacy or regulatory medical approval. Alistron STEM laboratory setups occur strictly following formal school assessment and administration approval.
           </span>
         </div>
 

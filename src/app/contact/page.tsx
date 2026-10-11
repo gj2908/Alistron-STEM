@@ -3,8 +3,8 @@ import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, ShieldCheck, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Contact & Enquiries | ALISTRON NeuroTech & STEM",
-  description: "Reach Alistron for school STEM lab setup proposals, NeuroTech research collaboration, or general technical enquiries.",
+  title: "Contact & Enquiries | ALISTRON Bionics & STEM",
+  description: "Reach Alistron for school STEM lab setup proposals, Bionics research collaboration, or general technical enquiries.",
 };
 
 export default function ContactPage() {
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   </li>
                   <li style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
                     <ShieldCheck size={16} color="var(--neuro-primary)" />
-                    <span>NeuroTech discussions respect research intellectual property.</span>
+                    <span>Bionics discussions respect research intellectual property.</span>
                   </li>
                 </ul>
               </div>

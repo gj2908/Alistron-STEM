@@ -155,7 +155,7 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
             transition: "all 0.2s ease",
           }}
         >
-          <Cpu size={18} /> NeuroTech Collaboration
+          <Cpu size={18} /> Bionics Collaboration
         </button>
 
         <button
@@ -389,7 +389,7 @@ export default function ContactForm({ initialType }: { initialType?: "school" | 
             </>
           ) : (
             <>
-              <Send size={18} /> Send {enquiryType === "school" ? "STEM Lab" : enquiryType === "neurotech" ? "NeuroTech" : "General"} Enquiry
+              <Send size={18} /> Send {enquiryType === "school" ? "STEM Lab" : enquiryType === "neurotech" ? "Bionics" : "General"} Enquiry
             </>
           )}
         </button>

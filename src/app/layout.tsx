@@ -17,9 +17,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "ALISTRON | Advancing NeuroTech Research & STEM Education",
-  description: "Alistron is a technology venture bridging pioneering NeuroTech research and practical, high-impact STEM education infrastructure for schools.",
-  keywords: ["Alistron", "NeuroTech", "STEM Education", "Arduino Workshops", "BCI Research", "School Science Labs", "Electromyography", "EEG Signal Processing"],
+  title: "ALISTRON | Advancing Bionics Research & STEM Education",
+  description: "Alistron is a technology venture bridging pioneering Bionics research and practical, high-impact STEM education infrastructure for schools.",
+  keywords: ["Alistron", "Alistron Bionics", "Bionics", "Prosthetics", "NeuroTech", "STEM Education", "Arduino Workshops", "BCI Research", "School Science Labs", "Electromyography", "EEG Signal Processing"],
   authors: [{ name: "Alistron Engineering Team", url: "https://alistron.in" }],
   metadataBase: new URL("https://alistron.in"),
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ALISTRON | NeuroTech & STEM Infrastructure",
+    title: "ALISTRON | Bionics & STEM Infrastructure",
     description: "Advancing frontier technology through pioneering research and practical school STEM labs.",
   },
 };

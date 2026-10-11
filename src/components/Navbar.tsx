@@ -7,7 +7,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Logo from "@/components/Logo";
 
 const navLinks = [
-  { name: "NeuroTech", href: "/neurotech", division: "neuro" },
+  { name: "Bionics", href: "/neurotech", division: "neuro" },
   { name: "STEM", href: "/stem", division: "stem" },
   { name: "Projects", href: "/projects" },
   { name: "Events", href: "/events" },

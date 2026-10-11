@@ -41,7 +41,7 @@ export default function PrivacyPage() {
                 1. Overview & Commitment
               </h3>
               <p style={{ color: "var(--color-slate-700)", lineHeight: 1.6 }}>
-                ALISTRON (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) operates the website <strong>https://alistron.in</strong>. We respect your personal privacy and are committed to protecting the information you share when inquiring about our NeuroTech research or STEM laboratory services.
+                ALISTRON (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) operates the website <strong>https://alistron.in</strong>. We respect your personal privacy and are committed to protecting the information you share when inquiring about our Bionics research or STEM laboratory services.
               </p>
             </div>
 
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
                 <li>Full Name</li>
                 <li>Work or Institutional Email Address</li>
                 <li>School / Organization Name or Phone Number</li>
-                <li>Selected Enquiry Category (STEM Lab, NeuroTech, or General)</li>
+                <li>Selected Enquiry Category (STEM Lab, Bionics, or General)</li>
                 <li>Detailed message contents and privacy consent checkbox confirmation</li>
               </ul>
             </div>

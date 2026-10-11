@@ -58,14 +58,15 @@ async function handleContact(request, env) {
   const resendFromEmail = env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
   const resendToEmail = env.RESEND_TO_EMAIL || "contact@alistron.in";
   const category = typeof enquiryType === "string" && enquiryType ? enquiryType : "general";
+  const categoryLabel = { neurotech: "Bionics", school: "School STEM", general: "General" }[category] || category;
 
   // 3. Optional Resend email delivery
   if (resendApiKey && String(resendApiKey).trim().length > 0) {
     try {
-      const emailSubject = `[Alistron Website Enquiry] ${category.toUpperCase()}: ${name}`;
+      const emailSubject = `[Alistron Website Enquiry] ${categoryLabel.toUpperCase()}: ${name}`;
       const emailHtml = `
         <h2>New Alistron Web Enquiry</h2>
-        <p><strong>Enquiry Category:</strong> ${escapeHtml(category)}</p>
+        <p><strong>Enquiry Category:</strong> ${escapeHtml(categoryLabel)}</p>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Organization / Phone:</strong> ${escapeHtml(orgPhone || "Not provided")}</p>

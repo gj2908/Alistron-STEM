@@ -34,11 +34,11 @@ export const JOURNEY_MILESTONES: JourneyMilestone[] = [
   {
     id: "first-prototype",
     year: "Phase 2: R&D Exploration",
-    phase: "First NeuroTech Lab Work",
+    phase: "First Bionics Lab Work",
     title: "First Electromyography (EMG) Bionic Arm Prototype",
     tagline: "Transitioning from hobby projects to non-invasive neural signal research",
     description:
-      "Recognizing the potential of surface muscle signal classification, the team developed an exploratory 3D-printed prosthetic hand controlled via sEMG sensors, laying the foundation for Alistron NeuroTech.",
+      "Recognizing the potential of surface muscle signal classification, the team developed an exploratory 3D-printed prosthetic hand controlled via sEMG sensors, laying the foundation for Alistron Bionics.",
     highlights: [
       "Custom sEMG signal processing & noise filtering circuits",
       "3D-printed multi-articulated bionic hand mechanics",
@@ -47,7 +47,7 @@ export const JOURNEY_MILESTONES: JourneyMilestone[] = [
     image: "/images/journey/bionic-arm-emblem.webp",
     imageCaption: "Original Bionic Arm Prototype Emblem",
     isOriginalPhoto: true,
-    badge: "NeuroTech Genesis"
+    badge: "Bionics Genesis"
   },
   {
     id: "stem-workshops",
@@ -74,10 +74,10 @@ export const JOURNEY_MILESTONES: JourneyMilestone[] = [
     title: "Building Alistron Into an Engineering & Technology Venture",
     tagline: "Structuring operations into specialized engineering & education divisions",
     description:
-      "Alistron is an MSME-registered venture focused on practical STEM education and emerging NeuroTech research. Through Alistron STEM, we aim to support schools with STEM lab planning, Arduino workshops, and robotics learning. Alistron NeuroTech focuses on assistive technology concepts, biosignal engineering, and related research.",
+      "Alistron is an MSME-registered venture focused on practical STEM education and emerging Bionics research. Through Alistron STEM, we aim to support schools with STEM lab planning, Arduino workshops, and robotics learning. Alistron Bionics focuses on assistive technology concepts, biosignal engineering, and related research.",
     highlights: [
       "MSME/Udyam registration supporting Alistron's business identity.",
-      "Two focused divisions: Alistron NeuroTech and Alistron STEM.",
+      "Two focused divisions: Alistron Bionics and Alistron STEM.",
       "Developing educational programs, engineering projects, and institutional collaborations."
     ],
     image: "/images/journey/venture-concept.webp",

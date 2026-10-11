@@ -9,12 +9,10 @@ import {
   ChevronDown,
   ChevronUp,
   ArrowRight,
-  Sparkles,
   ShieldAlert,
   GraduationCap,
   Cpu,
   CheckCircle2,
-  CameraOff,
 } from "lucide-react";
 import { AlistronEvent } from "@/data/events";
 
@@ -129,7 +127,7 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
         </span>
       </div>
 
-      {/* Optional Verified Event Photograph */}
+      {/* Optional Event Photograph */}
       {event.hasOriginalPhoto && event.image && (
         <div
           style={{
@@ -190,34 +188,6 @@ export default function EventCard({ event, featured = false }: EventCardProps) {
       >
         {event.shortDescription}
       </p>
-
-      {/* Photography Status Indicator */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "0.5rem",
-          padding: "0.6rem 0.85rem",
-          borderRadius: "var(--radius-md)",
-          backgroundColor: event.hasOriginalPhoto ? "#ECFDF5" : "var(--color-slate-50)",
-          border: `1px solid ${event.hasOriginalPhoto ? "#A7F3D0" : "var(--color-slate-200)"}`,
-          marginBottom: "1.25rem",
-          fontSize: "0.775rem",
-          color: event.hasOriginalPhoto ? "#065F46" : "var(--color-slate-500)",
-        }}
-      >
-        {event.hasOriginalPhoto && event.image ? (
-          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-            <Sparkles size={14} color="#059669" />
-            <span>Verified Original Photograph Attached</span>
-          </div>
-        ) : (
-          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-            <CameraOff size={14} color="var(--color-slate-400)" />
-            <span>Original Event Photographs: Pending Archival Verification</span>
-          </div>
-        )}
-      </div>
 
       {/* Date & Venue Section (Transparently noted when unverified) */}
       <div

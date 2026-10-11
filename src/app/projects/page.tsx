@@ -52,7 +52,7 @@ export default function ProjectsPage() {
                 School Lab Enquiry
               </Link>
               <Link href="/contact?type=neurotech" className="btn btn-neuro">
-                NeuroTech & IoT Collaboration
+                Bionics & IoT Collaboration
               </Link>
             </div>
           </div>

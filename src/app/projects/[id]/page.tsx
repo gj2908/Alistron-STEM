@@ -78,7 +78,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
               <span className={"badge " + (isNeuro ? "badge-neuro" : isIoT ? "badge-parent" : "badge-stem")}>
                 {isNeuro ? <Cpu size={14} /> : isIoT ? <Radio size={14} /> : <GraduationCap size={14} />}
-                {isNeuro ? "Alistron NeuroTech" : isIoT ? "Wireless & IoT Division" : "Alistron STEM"}
+                {isNeuro ? "Alistron Bionics" : isIoT ? "Wireless & IoT Division" : "Alistron STEM"}
               </span>
 
               <span

@@ -38,7 +38,7 @@ export default function Home() {
 
             <ul className="hero-meta">
               <li>MSME / Udyam registered</li>
-              <li>NeuroTech research</li>
+              <li>Bionics research</li>
               <li>STEM labs for schools</li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
               gap: "2rem",
             }}
           >
-            {/* Division Card A: NeuroTech */}
+            {/* Division Card A: Bionics */}
             <div className="card card-neuro card-interactive" style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
                 <div
@@ -102,7 +102,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="badge badge-neuro">Division A</span>
-                  <h3 style={{ fontSize: "1.5rem", color: "var(--color-navy-900)" }}>Alistron NeuroTech</h3>
+                  <h3 style={{ fontSize: "1.5rem", color: "var(--color-navy-900)" }}>Alistron Bionics</h3>
                 </div>
               </div>
 
@@ -126,7 +126,7 @@ export default function Home() {
 
               <div style={{ paddingTop: "1.25rem", borderTop: "1px solid var(--color-slate-200)" }}>
                 <Link href="/neurotech" className="btn btn-neuro" style={{ width: "100%" }}>
-                  Explore NeuroTech Division <ArrowRight size={16} />
+                  Explore Bionics Division <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
               <ShieldCheck size={28} color="var(--neuro-primary)" style={{ marginBottom: "1rem" }} />
               <h4 style={{ marginBottom: "0.5rem" }}>Responsible Research Framing</h4>
               <p style={{ fontSize: "0.9rem", color: "var(--color-slate-600)" }}>
-                NeuroTech exploration is presented transparently as experimental engineering and non-clinical research. We make no unverified medical or commercial efficacy claims.
+                Bionics exploration is presented transparently as experimental engineering and non-clinical research. We make no unverified medical or commercial efficacy claims.
               </p>
             </div>
 
@@ -320,7 +320,7 @@ export default function Home() {
               School STEM Enquiry
             </Link>
             <Link href="/contact?type=neurotech" className="btn btn-neuro btn-lg">
-              NeuroTech Collaboration
+              Bionics Collaboration
             </Link>
           </div>
         </div>

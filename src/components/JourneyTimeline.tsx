@@ -7,7 +7,7 @@ import { CheckCircle2, Maximize2, Sparkles, Briefcase, Users, Microchip, Graduat
 
 export default function JourneyTimeline() {
   const [activeTab, setActiveTab] = useState<string>("all");
-  const [modalImage, setModalImage] = useState<{ src: string; title: string; caption?: string } | null>(null);
+  const [modalImage, setModalImage] = useState<{ src: string; title: string } | null>(null);
 
   const iconsMap: Record<string, React.ReactNode> = {
     "college-club": <Users className="w-5 h-5" />,
@@ -33,7 +33,7 @@ export default function JourneyTimeline() {
             From a Student Club to an MSME-Registered Venture
           </h2>
           <p style={{ fontSize: "1.1rem", color: "var(--color-slate-600)", lineHeight: 1.6 }}>
-            What began as a group of passionate engineering students soldering hardware in a lab has grown into <strong>ALISTRON</strong>—an MSME-registered venture focused on practical STEM education and emerging NeuroTech research.
+            What began as a group of passionate engineering students soldering hardware in a lab has grown into <strong>ALISTRON</strong>—an MSME-registered venture focused on practical STEM education and emerging Bionics research.
           </p>
 
           {/* Interactive Phase Selector */}
@@ -156,19 +156,11 @@ export default function JourneyTimeline() {
                         sizes="(max-width: 768px) 100vw, 500px"
                         priority={index === 0}
                       />
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          background: m.id === "first-prototype" ? "none" : "linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%)",
-                        }}
-                      />
                       <button
                         onClick={() =>
                           setModalImage({
                             src: m.image,
                             title: m.title,
-                            caption: m.imageCaption || (m.isOriginalPhoto ? "Original Archival Image" : "Illustrative Concept Image"),
                           })
                         }
                         style={{
@@ -188,34 +180,11 @@ export default function JourneyTimeline() {
                           cursor: "pointer",
                           transition: "transform 0.2s ease",
                         }}
-                        title="Expand Image"
+                        title="Expand image"
+                        aria-label="Expand image"
                       >
                         <Maximize2 size={16} />
                       </button>
-                      <div
-                        style={{
-                          position: "absolute",
-                          bottom: "12px",
-                          left: "12px",
-                          right: "12px",
-                          color: "var(--color-white)",
-                          fontSize: "0.85rem",
-                          fontWeight: 500,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          background: "rgba(15, 23, 42, 0.75)",
-                          backdropFilter: "blur(4px)",
-                          padding: "0.35rem 0.65rem",
-                          borderRadius: "var(--radius-sm)",
-                        }}
-                      >
-                        <span>
-                          {m.isOriginalPhoto ? "📸 " : "🎨 "}
-                          {m.imageCaption || (m.isOriginalPhoto ? "Original Archival Photograph" : "Illustrative Concept Image")}
-                        </span>
-                        <span style={{ fontSize: "0.75rem", opacity: 0.85 }}>Click to enlarge</span>
-                      </div>
                     </div>
                   </div>
 
@@ -325,9 +294,6 @@ export default function JourneyTimeline() {
             >
               <div>
                 <h4 style={{ color: "var(--color-white)", fontSize: "1.1rem" }}>{modalImage.title}</h4>
-                <p style={{ color: "var(--color-slate-400)", fontSize: "0.8rem", margin: 0 }}>
-                  {modalImage.caption || "Archival Milestone Record"}
-                </p>
               </div>
               <button
                 onClick={() => setModalImage(null)}
